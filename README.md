@@ -1,109 +1,109 @@
-# 🌍 Legends Club – Official Website
+# 🌍 Legends Club – Site Officiel
 
-## 📌 About the Project
+## 📌 À propos du projet
 
-Legends Club is a dynamic and diversified university club based at **Université Mundiapolis – Casablanca**.  
+Legends Club est un club universitaire dynamique et diversifié basé à **l’Université Mundiapolis – Casablanca**.
 
-This website was developed to present the club’s humanitarian, cultural, sports, gaming, and educational activities in a modern and professional way.
+Ce site web a été développé afin de présenter les activités humanitaires, culturelles, sportives, événementielles et gaming du club dans un format moderne et professionnel.
 
-The platform showcases the club’s mission, history, activities, collaborators, and long-term vision.
-
----
-
-## 🎯 Project Objective
-
-The goal of this website is to:
-
-- Promote humanitarian initiatives
-- Highlight the club’s activities and impact
-- Facilitate communication with members and partners
-- Encourage donations and community engagement
-- Strengthen the club’s digital presence
+La plateforme met en valeur la mission du club, son histoire, ses activités, ses collaborateurs et sa vision à long terme.
 
 ---
 
-## 🏫 Club Information
+## 🎯 Objectif du projet
 
-**Location:** Université Mundiapolis – Casablanca  
-**Founded:** 2022  
-**Members:** 150+  
+L’objectif principal de ce site est de :
 
-### 💙 Core Values
-- Team Spirit  
-- Solidarity  
+- Promouvoir les initiatives humanitaires du club  
+- Mettre en avant l’impact des activités organisées  
+- Faciliter la communication avec les membres et partenaires  
+- Encourager les dons et l’engagement communautaire  
+- Renforcer la présence digitale du club  
+
+---
+
+## 🏫 Informations sur le club
+
+**Localisation :** Université Mundiapolis – Casablanca  
+**Fondation :** 2022  
+**Membres :** 150+  
+
+### 💙 Nos valeurs
+- Esprit d’équipe  
+- Solidarité  
 - Excellence  
 
 ---
 
-## 🤝 Main Activities
+## 🤝 Principales activités
 
-- 🩸 Blood Donation Campaigns  
-- 👵 Retirement Home Visits  
-- 🌙 Ramadan Charity (Ma2idat Rahmane & Iftar)  
-- 🏠 Orphanage Support  
-- ♿ Mental Disability Support  
-- 🚐 Humanitarian Caravans  
-- 🏚️ Earthquake Relief Support  
-- 🎮 Gaming Events  
-- 🏆 Sports Activities  
-- 🎤 Conferences & Training  
-
----
-
-## 🛠️ Technologies Used
-
-- ⚛️ React (Vite)
-- 🎨 Tailwind CSS
-- 🔀 React Router
-- 🎞️ Framer Motion
-- 🌐 Netlify (Deployment)
+- 🩸 Campagnes de don de sang  
+- 👵 Visites aux maisons de retraite  
+- 🌙 Actions caritatives pendant le Ramadan (Ma2idat Rahmane & Iftar)  
+- 🏠 Soutien aux orphelinats  
+- ♿ Soutien aux personnes atteintes de déficience mentale  
+- 🚐 Caravanes humanitaires  
+- 🏚️ Soutien aux victimes du séisme  
+- 🎮 Événements Gaming  
+- 🏆 Activités sportives  
+- 🎤 Conférences et formations  
 
 ---
 
-## 🚀 Live Website
+## 🛠️ Technologies utilisées
+
+- ⚛️ React (Vite)  
+- 🎨 Tailwind CSS  
+- 🔀 React Router  
+- 🎞️ Framer Motion  
+- 🌐 Netlify (Déploiement)  
+
+---
+
+## 🚀 Site en ligne
 
 🔗 https://legendsclub.netlify.app/
 
 ---
 
-## 💳 Donation Information
+## 💳 Informations pour les dons
 
-**Bank:** Attijari  
-**RIB:** 5417 5540 0099 7389  
+**Banque :** Attijari  
+**RIB :** 5417 5540 0099 7389  
 
 ---
 
 ## 📩 Contact
 
-📧 Email: clublegends2022@gmail.com  
+📧 Email : clublegends2022@gmail.com  
 
-**President:**  
+**Présidente :**  
 Ikram – 0603172049  
 
-**Vice President:**  
-Hamza Roudani – +212 687 622806  
+**Vice-Président-Roudani :**  
+Hamza  – +212 687 622806  
 
-**Vice President:**  
-Yassmine Nouaceur – 0625442697  
-
----
-
-## 📱 Social Media
-
-- Instagram: https://www.instagram.com/club_legends_mundiapolis  
-- TikTok: https://www.tiktok.com/@legends_club_mundiapolis  
+**Vice-Présidente-Nouaceur :**  
+Yassmine  – 0625442697  
 
 ---
 
-## 👨‍💻 Developed By
+## 📱 Réseaux sociaux
+
+- Instagram : https://www.instagram.com/club_legends_mundiapolis  
+- TikTok : https://www.tiktok.com/@legends_club_mundiapolis  
+
+---
+
+## 👨‍💻 Développé par
 
 **Abdellatif El Hamaoui**  
-🔗 LinkedIn: https://www.linkedin.com/in/abdellatif-elhamaoui/
+🔗 LinkedIn : https://www.linkedin.com/in/abdellatif-elhamaoui/
 
 ---
 
-## 📜 License
+## 📜 Licence
 
-This project was developed for educational and organizational purposes.
+Projet développé à des fins éducatives et organisationnelles.
 
-© Legends Club – All Rights Reserved.
+© Legends Club – Tous droits réservés.
