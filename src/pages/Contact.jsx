@@ -18,8 +18,8 @@ const Contact = () => {
   const contactInfo = [
     { label: 'Email', value: 'clublegends2022@gmail.com', link: 'mailto:clublegends2022@gmail.com' },
     { label: 'Présidente', value: 'Ikram – 0603172049', link: 'tel:+212603172049' },
-    { label: 'Vice-Président', value: 'Hamza Roudani – 0687 622806', link: 'tel:+212687622806' },
-    { label: 'Vice-Présidente', value: 'Yassmine Nouaceur – 0625442697', link: 'tel:+212625442697' },
+    { label: 'Vice-Président-Roudani', value: 'Hamza Saliha – 0687 622806', link: 'tel:+212687622806' },
+    { label: 'Vice-Présidente-Nouaceur', value: 'Yassmine Soufary – 0625442697', link: 'tel:+212625442697' },
     { label: 'Instagram', value: '@club_legends_mundiapolis', link: 'https://www.instagram.com/club_legends_mundiapolis' },
     { label: 'TikTok', value: '@legends_club_mundiapolis', link: 'https://www.tiktok.com/@legends_club_mundiapolis' },
   ]

@@ -7,6 +7,12 @@ const videos = [
   { id: 2, title: 'Soutien Déficience Mentale', description: 'Nos actions de soutien', src: '/images/Vidéos/Soutien aux Personnes avec Déficience Mentale.mp4' },
   { id: 3, title: 'Visite à l\'Orphelinat', description: 'Moments de partage', src: '/images/Vidéos/Visite à l\'Orphelinat.mp4' },
   { id: 4, title: 'Caravane Séisme', description: 'Intervention suite au séisme', src: '/images/Vidéos/Caravane Séisme.mp4' },
+  { id: 5, title: 'Soirée Traditionnelle', description: 'Soirée culturelle traditionnelle', src: '/images/Soiree Traditionnelle/WhatsApp Video 2026-02-26 at 23.40.10.mp4' },
+  { id: 6, title: 'Semaine culturelle', description: 'Semaine dédiée aux activités culturelles', src: '/images/Semaine culturelle/VID-20240424-WA0064.mp4' },
+  { id: 7, title: 'Black Party', description: 'Soirée festive à thème noir', src: '/images/Black Party/VID-20250209-WA0045.mp4' },
+  { id: 8, title: 'Concert Mohamed Adly', description: 'Concert artistique animé par Mohamed Adly', src: '/images/Concert Mohamed Adly/VID-20241130-WA0042.mp4' },
+  { id: 9, title: 'Halloween', description: 'Événement festif Halloween', src: '/images/Halloween/VID-20241028-WA0144.mp4' },
+  { id: 10, title: 'Summer Vibes', description: 'Événement estival de fin d\'année', src: '/images/Summer Vibes/IMG_0788.MOV' },
 ]
 
 const Videos = () => (

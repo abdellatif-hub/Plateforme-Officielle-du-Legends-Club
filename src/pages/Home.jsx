@@ -1,11 +1,32 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 const encodeImagePath = (path) => {
   return path.split('/').map(segment => encodeURIComponent(segment)).join('/')
 }
 
 const Home = () => {
+  const [currentHeroImage, setCurrentHeroImage] = useState(0)
+  
+  const heroImages = [
+    '/images/caravane/WhatsApp Image 2026-02-23 at 03.31.19.jpeg',
+    '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.49.jpeg',
+    '/images/les orphelins/IMG-20221210-WA0063.jpg',
+    '/images/don de sang/WhatsApp Image 2026-02-23 at 03.17.57 (1).jpeg',
+    '/images/ma2idat rahman/WhatsApp Image 2026-02-23 at 03.49.18.jpeg',
+    '/images/desicience mentale/IMG-20240722-WA0017.jpg',
+    '/images/seisme/WhatsApp Image 2026-02-23 at 04.02.56.jpeg',
+    '/images/iftar/IMG-20230331-WA0028.jpg',
+  ]
+
+  // Changement automatique de l'image toutes les 3 secondes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroImage((prev) => (prev + 1) % heroImages.length)
+    }, 3000) // Change toutes les 3 secondes
+    return () => clearInterval(interval)
+  }, [heroImages.length])
   const activityPhotos = [
     { src: '/images/caravane/WhatsApp Image 2026-02-23 at 03.31.19.jpeg', title: 'Caravane Humanitaire', link: '/activites' },
     { src: '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.49.jpeg', title: 'Maison de Retraite', link: '/activites' },
@@ -40,8 +61,35 @@ const Home = () => {
     <div className="pt-20">
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={encodeImagePath('/images/caravane/WhatsApp Image 2026-02-23 at 03.31.19.jpeg')} alt="Legends Club" className="absolute inset-0 w-full h-full object-cover" />
+          <AnimatePresence mode="wait">
+            <motion.img 
+              key={currentHeroImage}
+              src={encodeImagePath(heroImages[currentHeroImage])} 
+              alt="Legends Club" 
+              className="absolute inset-0 w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            />
+          </AnimatePresence>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
+          
+          {/* Indicateurs de carousel */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+            {heroImages.map((_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => setCurrentHeroImage(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === currentHeroImage ? 'w-8 bg-white' : 'w-2 bg-white/50'
+                }`}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label={`Aller à l'image ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>

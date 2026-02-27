@@ -39,7 +39,12 @@ const About = () => (
               <p className="text-primary-200">Présidente du Club</p>
             </div>
           </div>
-          <p className="text-primary-50">En tant que présidente du Club Legends, je suis fière de poursuivre notre mission avec détermination. Merci de votre soutien et de votre confiance.</p>
+          <p className="text-primary-50">En tant que  présidente du Club Legends, un club humanitaire, événementiel, sportif, de conférence et de gaming qui vise à promouvoir l'esprit d'équipe, la solidarité et l'excellence. Je suis fière d'être à la tête de ce club pour les 4  années de sa fondation et de poursuivre notre mission avec détermination.
+
+Je tiens à remercier chaleureusement nos membres, notre comité et nos collaborateurs pour leur engagement et leur soutien sans faille. Votre dévouement est la clé de notre succès et je suis honorée de travailler avec vous pour faire du Legends Club un espace d'excellence et de solidarité.
+
+Ensemble, nous allons continuer à innover, à nous engager et à faire une différence dans notre communauté. 
+<br /> <br />Merci de votre soutien et de votre confiance.</p>
         </div>
       </div>
     </section>
@@ -55,7 +60,7 @@ const About = () => (
             <motion.div key={f.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white p-8 rounded-xl shadow-lg text-center">
               <img src={encodeImagePath(f.image)} alt={f.name} className="w-24 h-24 rounded-full object-cover mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900">{f.name}</h3>
-              <p className="text-gray-600 mt-2">Fondateur</p>
+              <p className="text-gray-600 mt-2">{f.name === 'Ikram Saadani' ? 'Fondatrice' : 'Fondateur'}</p>
             </motion.div>
           ))}
         </div>
