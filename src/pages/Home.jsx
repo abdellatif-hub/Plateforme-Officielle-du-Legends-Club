@@ -29,11 +29,11 @@ const Home = () => {
   }, [heroImages.length])
   const activityPhotos = [
     { src: '/images/caravane/WhatsApp Image 2026-02-23 at 03.31.19.jpeg', title: 'Caravane Humanitaire', link: '/activites' },
-    { src: '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.49.jpeg', title: 'Maison de Retraite', link: '/activites' },
-    { src: '/images/les orphelins/IMG-20221210-WA0063.jpg', title: 'Orphelins', link: '/activites' },
+    { src: '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.49.jpeg', title: 'Visite à la Maison de Retraite', link: '/activites' },
+    { src: '/images/les orphelins/IMG-20221210-WA0063.jpg', title: 'Visite à l\'Orphelinat', link: '/activites' },
     { src: '/images/don de sang/WhatsApp Image 2026-02-23 at 03.17.57 (1).jpeg', title: 'Don de Sang', link: '/activites' },
     { src: '/images/ma2idat rahman/WhatsApp Image 2026-02-23 at 03.49.18.jpeg', title: 'Ma2idat Rahman', link: '/activites' },
-    { src: '/images/desicience mentale/IMG-20240722-WA0017.jpg', title: 'Déficience Mentale', link: '/activites' },
+    { src: '/images/desicience mentale/IMG-20240722-WA0017.jpg', title: 'visite aux enfants avec une déficience mentale', link: '/activites' },
     { src: '/images/seisme/WhatsApp Image 2026-02-23 at 04.02.56.jpeg', title: 'Caravane Séisme', link: '/activites' },
     { src: '/images/iftar/IMG-20230331-WA0028.jpg', title: 'Iftar SDF', link: '/activites' },
   ]
@@ -120,8 +120,8 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {activityPhotos.map((photo, index) => (
               <Link key={index} to={photo.link}>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.08 }} whileHover={{ scale: 1.05, y: -5 }} className={`relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
-                  <div className={`aspect-square ${index === 0 ? 'md:aspect-auto md:min-h-[400px]' : ''}`}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.08 }} whileHover={{ scale: 1.05, y: -5 }} className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                  <div className="aspect-square">
                     <img src={encodeImagePath(photo.src)} alt={photo.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black/80 to-transparent"><span className="font-semibold">{photo.title}</span></div>
                   </div>

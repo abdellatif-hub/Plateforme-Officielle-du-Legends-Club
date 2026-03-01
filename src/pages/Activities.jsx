@@ -7,6 +7,7 @@ const Activities = () => {
   const [selected, setSelected] = useState(null)
   const [hoveredCard, setHoveredCard] = useState(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [selectedImage, setSelectedImage] = useState(null)
   const activities = [
     { id: 1, title: 'Campagne de Don de Sang', description: 'Organisation de campagnes de don de sang.', objectives: ['Sensibiliser', 'Collecter des dons', 'Sauver des vies'], images: ['/images/don de sang/WhatsApp Image 2026-02-23 at 03.17.57 (1).jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.17.58 (1).jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.17.58 (2).jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.17.59 (2).jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.18.01.jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.27.00.jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.27.01 (1).jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.27.01 (2).jpeg', '/images/don de sang/WhatsApp Image 2026-02-23 at 03.27.01.jpeg'] },
     { id: 2, title: 'Visite Maison de Retraite', description: 'Visites aux maisons de retraite.', objectives: ['Apporter de la joie', 'Créer des liens'], images: ['/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.49.jpeg', '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.49 (1).jpeg', '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.49 (2).jpeg', '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.50 (1).jpeg', '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.50.jpeg', '/images/maison de retraite/WhatsApp Image 2026-02-23 at 03.13.51.jpeg'] },
@@ -452,6 +453,7 @@ const Activities = () => {
                             transition={{ delay: 0.8 + i * 0.05, type: "spring", stiffness: 200 }}
                             whileHover={{ scale: 1.1, zIndex: 10 }}
                             className="rounded-xl overflow-hidden shadow-lg cursor-pointer group/img"
+                            onClick={() => setSelectedImage(img)}
                           >
                             <div className="relative overflow-hidden">
                               <img 
@@ -473,6 +475,55 @@ const Activities = () => {
               </motion.div>
             </motion.div>
           </>
+        )}
+      </AnimatePresence>
+
+      {/* Modal pour afficher l'image en grand */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-[60] flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              onClick={e => e.stopPropagation()}
+              className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center"
+            >
+              <motion.img
+                src={encodeImagePath(selectedImage)}
+                alt="Image agrandie"
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              
+              {/* Bouton fermer */}
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                whileHover={{ scale: 1.1, rotate: 90 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 w-12 h-12 bg-white/95 hover:bg-white rounded-full flex items-center justify-center shadow-xl transition-all duration-300 z-10"
+              >
+                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </motion.button>
+
+              {/* Instructions */}
+              
+            </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>
